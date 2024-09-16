@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Marseille\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Marseille\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Asteroid.1103631691.00" t="ExcludeRecursive" />
+    <e p="Z:\Asteroid\Asteroid" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Prefabs" t="Include" />
+        <e p="Scenes" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Ability" t="Include">
+            <e p="Ability.cs" t="Include" />
+            <e p="AbilityController.cs" t="Include" />
+            <e p="Cooldown" t="Include">
+              <e p="BaseCooldownControllerHandler.cs" t="Include" />
+              <e p="ByTimeCooldownHandler.cs" t="Include" />
+              <e p="CooldownController.cs" t="Include" />
+              <e p="ICooldown.cs" t="Include" />
+              <e p="NoneCooldownHandler.cs" t="Include" />
+            </e>
+            <e p="MoveAbility.cs" t="Include" />
+            <e p="ShootAbility.cs" t="Include" />
+          </e>
+          <e p="Bullets" t="Include">
+            <e p="Bullet.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="InputPlayer.cs" t="Include" />
+          </e>
+          <e p="Managers" t="Include">
+            <e p="ScreenWrapManager.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerController.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+          </e>
+          <e p="Singleton" t="Include">
+            <e p="Singleton.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Settings" t="Include">
+          <e p="Scenes" t="Include" />
+        </e>
+        <e p="Sirenix" t="Include">
+          <e p="Assemblies" t="Include">
+            <e p="link.xml" t="Include" />
+            <e p="NoEditor" t="Include" />
+            <e p="NoEmitAndNoEditor" t="Include" />
+            <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+            <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+            <e p="Sirenix.Serialization.Config.xml" t="Include" />
+            <e p="Sirenix.Serialization.xml" t="Include" />
+            <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+            <e p="Sirenix.Utilities.xml" t="Include" />
+          </e>
+          <e p="Demos" t="Include" />
+          <e p="Odin Inspector" t="Include">
+            <e p="Assets" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Bootstrap License.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Config" t="Include">
+              <e p="Editor" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="Sirenix" t="Include" />
+              </e>
+            </e>
+            <e p="Modules" t="Include">
+              <e p="Unity.Mathematics" t="Include">
+                <e p="manifest.txt" t="Include" />
+                <e p="MathematicsDrawers.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.Modules.UnityMathematics.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Readme.txt" t="Include" />
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Default" t="Include" />
+        </e>
+      </e>
+      <e p="Asteroid.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" t="IncludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
