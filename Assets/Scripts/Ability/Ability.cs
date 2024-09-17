@@ -1,7 +1,9 @@
 ﻿using System;
 using Input;
 using Player;
+using PropertySystem;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Ability
@@ -12,7 +14,7 @@ namespace Ability
         void Dispose();
     }
 
-    public abstract class Ability : MonoBehaviour, IAbility
+    public abstract class Ability : SerializedMonoBehaviour, IAbility
     {
         protected Action _onActive;
 
@@ -21,8 +23,8 @@ namespace Ability
         [SerializeField] 
         private CooldownController _cooldownController;
 
-        [SerializeReference,] 
-        private ICooldownHandler _cooldownHandler;
+        [SerializeReference,OdinSerialize] 
+        private ICooldownHandler _cooldownHandler = new NoneCooldownHandler();
         private bool useCooldown => !(_cooldownHandler is NoneCooldownHandler);
 
         [SerializeField,ShowIf(nameof(useCooldown))] 
@@ -30,16 +32,16 @@ namespace Ability
         [SerializeField] 
         protected InputPlayer _inputPlayer;
         
-        protected PlayerController _player;
+        protected PropertyCharacter _character;
         protected Vector2 _input;
         protected Rigidbody2D _rigidbody;
+        protected Transform _root;
         
         void IAbility.Init()
         {
-            Debug.Log("Init");
-            var root = transform.root;
-            _player = root.GetComponent<PlayerController>();
-            _rigidbody =  root.GetComponent<Rigidbody2D>();
+            _root = transform.root;
+            _character = _root.GetComponent<PropertyCharacter>();
+            _rigidbody =  _root.GetComponent<Rigidbody2D>();
             
             if (_cooldownController)
             {
@@ -54,8 +56,6 @@ namespace Ability
 
         private void OnActiveSkill()
         {
-            _blocked = true;
-            Debug.Log(nameof(OnActiveSkill));
             if (_cooldownController)
                 _cooldownController.Run(_cooldownTime * 60);
         }

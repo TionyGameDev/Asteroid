@@ -25,6 +25,17 @@
           </e>
           <e p="Bullets" t="Include">
             <e p="Bullet.cs" t="Include" />
+            <e p="BulletEntity.cs" t="Include" />
+            <e p="IBullet.cs" t="Include" />
+          </e>
+          <e p="GameSystem" t="Include">
+            <e p="DamageSystem" t="Include">
+              <e p="DamageSystem.cs" t="Include" />
+              <e p="HealthDamageStep.cs" t="Include" />
+              <e p="IDamageStep.cs" t="Include" />
+              <e p="ShieldDamageStep.cs" t="Include" />
+            </e>
+            <e p="Destroyer.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="InputPlayer.cs" t="Include" />
@@ -36,8 +47,17 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
           </e>
+          <e p="PropertySystem" t="Include">
+            <e p="IImpactable.cs" t="Include" />
+            <e p="Property.cs" t="Include" />
+            <e p="PropertyCharacter.cs" t="Include" />
+          </e>
           <e p="Singleton" t="Include">
             <e p="Singleton.cs" t="Include" />
+          </e>
+          <e p="TagSystem" t="Include">
+            <e p="Tag.cs" t="Include" />
+            <e p="TagComponent.cs" t="Include" />
           </e>
         </e>
         <e p="Settings" t="Include">

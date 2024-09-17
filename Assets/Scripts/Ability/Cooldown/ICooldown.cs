@@ -29,11 +29,6 @@ namespace Ability
 
         void SetHandler(ICooldownHandler handler);
     }
-
-    public interface ICooldownPointsProvider
-    {
-        float GetCooldownPoints();
-    }
     
     public interface ICooldownHandler : IDisposable
     {

@@ -7,16 +7,13 @@ namespace Ability.Cooldown
     [Serializable]
     public class ByTimeCooldownHandler : BaseCooldownControllerHandler
     {
-        [SerializeField]
-        private float _points;
-        [SerializeField]
-        private float _perSec;
+        private const int _points = 60;
+        private const int _perSec = 1;
 
 
         protected override void OnRun()
         {
             base.OnRun();
-            Debug.Log("OnRun");
 
             RunAsynch();
         }
@@ -24,12 +21,10 @@ namespace Ability.Cooldown
 
         async void RunAsynch()
         {
-            while (IsRun && _perSec > 0 && _points > 0)
+            while (IsRun)
             {
                 await Task.Delay((int)(_perSec * 1000));
-
-                Debug.Log("AddPoint");
-
+                
                 AddPoint(_points);
             }
         }

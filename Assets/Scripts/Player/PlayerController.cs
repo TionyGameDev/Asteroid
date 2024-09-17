@@ -1,9 +1,11 @@
-﻿using Managers;
+﻿using GameSystem.DamageSystem;
+using Managers;
+using PropertySystem;
 using UnityEngine;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : PropertyCharacter
     {
         private void Awake()
         {
@@ -12,7 +14,7 @@ namespace Player
 
         private void Initialization()
         {
-            ScreenWrapManager.Instance.SetPlayer(this.gameObject);
+            //ScreenWrapManager.Instance.SetPlayer(this.gameObject);
         }
     }
 }

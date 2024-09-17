@@ -13,7 +13,6 @@ namespace Ability
 
         public void Run()
         {
-            Debug.Log("Run");
             if (IsRun) return;
 
             IsRun = true;
@@ -37,7 +36,6 @@ namespace Ability
 
         protected void AddPoint(float points)
         {
-            Debug.Log("AddPoint");
             OnAddPoint?.Invoke(points);
         }
 

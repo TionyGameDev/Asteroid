@@ -1,4 +1,5 @@
 ﻿using Bullets;
+using PropertySystem;
 using UnityEngine;
 
 namespace Player
@@ -8,15 +9,11 @@ namespace Player
         [SerializeField] 
         private Transform _point;
         
-        public Rigidbody2D InstantiateBullet(Rigidbody2D bullet,Vector3 direction)
+        public void InstantiateBullet(ImpactSetting impact, Bullet bullet, Quaternion quaternion)
         {
-            var rb = Instantiate(bullet, _point.position, Quaternion.identity);
+            var rb = Instantiate(bullet, _point.position, quaternion);
             if (rb)
-            {
-                //rb.velocity = direction;
-            }
-
-            return rb;
+                rb.Init(impact);
         }
     }
 }

@@ -8,16 +8,18 @@ namespace Ability
         [SerializeReference]
         private ICooldownHandler _cooldownHandler;
 
-        public event Action OnRun;
-        public event Action OnComplete;
-        public event Action<float> OnUpdate;
         [SerializeField]
         private float _currPoints;
         [SerializeField]
         private float _totalPoints;
-        
+
+        public event Action OnRun;
+        public event Action OnComplete;
+        public event Action<float> OnUpdate;
+
         public void Run()
         {
+            OnRun?.Invoke();
             _cooldownHandler.Run();
         }
 
@@ -37,7 +39,6 @@ namespace Ability
         {
             if (value == 0) return;
             
-            Debug.Log("AddPoints");
             _currPoints = _currPoints + value;
 
             _currPoints = _currPoints > _totalPoints ? _totalPoints : _currPoints;

@@ -1,6 +1,8 @@
 using System;
+using Bullets;
 using Input;
 using Player;
+using PropertySystem;
 using UnityEngine;
 
 namespace Ability
@@ -8,14 +10,13 @@ namespace Ability
     public class ShootAbility : Ability
     {
         [SerializeField] 
-        private Rigidbody2D _bullet;
-
+        private ImpactSetting _impact;
+        [SerializeField] 
+        private Bullet _bulletNew;
+        
         [SerializeField] 
         private Weapon _weapon;
 
-        [SerializeField] 
-        private float bulletSpeed = 8f;
-        
         private bool _press;
 
         private void Update()
@@ -28,18 +29,13 @@ namespace Ability
         private void HandleShooting() 
         {
             _onActive?.Invoke();
-            Vector2 shipVelocity = _rigidbody.velocity;
-            Vector2 shipDirection = transform.root.up;
-            float shipForwardSpeed = Vector2.Dot(shipVelocity, shipDirection);
-            var direction = shipDirection * shipForwardSpeed;
             
-            var bullet = _weapon.InstantiateBullet(_bullet,direction);
+            Quaternion rotationShip =_root.rotation;
 
-            bullet.velocity = shipDirection * shipForwardSpeed;
+            var impact = new ImpactSetting();
+            _impact.ImpactInfo.attacker = _character;
+            _weapon.InstantiateBullet(_impact,_bulletNew,rotationShip);
 
-            // Add force to propel bullet in direction the player is facing.
-            bullet.AddForce(bulletSpeed * transform.up, ForceMode2D.Impulse);
-           
         }
 
     }
