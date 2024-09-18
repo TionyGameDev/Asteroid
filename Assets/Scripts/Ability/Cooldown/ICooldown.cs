@@ -30,12 +30,16 @@ namespace Ability
         void SetHandler(ICooldownHandler handler);
     }
     
-    public interface ICooldownHandler : IDisposable
+    public abstract class ICooldownHandler : IDisposable
     {
-        event Action<float> OnAddPoint;
+        public abstract event Action<float> OnAddPoint;
 
-        void Init(CooldownController controller);
-        void Run();
-        void Complete();
+        public abstract void Init(CooldownController controller);
+        public abstract  void Run();
+        public abstract void Complete();
+        public virtual void Dispose()
+        {
+            
+        }
     }
 }

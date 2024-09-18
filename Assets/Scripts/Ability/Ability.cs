@@ -16,10 +16,6 @@ namespace Ability
 
     public abstract class Ability : SerializedMonoBehaviour, IAbility
     {
-        protected Action _onActive;
-
-        public bool _blocked;
-        
         [SerializeField] 
         private CooldownController _cooldownController;
 
@@ -36,7 +32,8 @@ namespace Ability
         protected Vector2 _input;
         protected Rigidbody2D _rigidbody;
         protected Transform _root;
-        
+        protected bool _blocked;
+        protected Action _onActive;
         void IAbility.Init()
         {
             _root = transform.root;

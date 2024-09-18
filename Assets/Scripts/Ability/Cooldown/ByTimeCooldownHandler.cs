@@ -10,14 +10,12 @@ namespace Ability.Cooldown
         private const int _points = 60;
         private const int _perSec = 1;
 
-
         protected override void OnRun()
         {
             base.OnRun();
 
             RunAsynch();
         }
-
 
         async void RunAsynch()
         {

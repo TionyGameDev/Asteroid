@@ -6,12 +6,11 @@ namespace Ability
     [Serializable]
     public abstract class BaseCooldownControllerHandler : ICooldownHandler
     {
-        
-        public event Action<float> OnAddPoint;
+        public override event Action<float> OnAddPoint;
 
         protected bool IsRun { get; private set; }
 
-        public void Run()
+        public override void Run()
         {
             if (IsRun) return;
 
@@ -22,7 +21,7 @@ namespace Ability
 
         protected virtual void OnRun() { }
 
-        public void Complete()
+        public override void Complete()
         {
             if (!IsRun) return;
 
@@ -40,7 +39,7 @@ namespace Ability
         }
 
         protected CooldownController controller { get; private set; }
-        public void Init(CooldownController controller)
+        public override void Init(CooldownController controller)
         {
             this.controller = controller;
 
@@ -48,7 +47,7 @@ namespace Ability
         }
 
         protected virtual void OnInit(CooldownController controller) { }
-        public void Dispose()
+        public override void Dispose()
         {
             IsRun = false;
         }

@@ -15,5 +15,15 @@ namespace Player
             if (rb)
                 rb.Init(impact);
         }
+        public void InstantiateBullet(ImpactSetting impact, Bullet bullet)
+        {
+            var rb = Instantiate(bullet, Vector3.zero, Quaternion.identity);
+            if (rb)
+            {
+               rb.transform.SetParent(_point);
+               rb.Init(impact);
+            }
+        }
+        
     }
 }

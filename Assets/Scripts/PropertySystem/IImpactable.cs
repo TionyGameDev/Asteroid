@@ -11,7 +11,9 @@ namespace PropertySystem
     [Serializable]
     public class ImpactInfo
     {
+        [HideInInspector]
         public PropertyCharacter attacker;
+        [HideInInspector]
         public PropertyCharacter target;
         public PropertyName name;
         public float value;

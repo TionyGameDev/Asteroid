@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Events.MessageSystem;
+using Events.MessageSystem.Messages;
 using GameSystem.DamageSystem;
 using TagSystem;
 using UnityEngine;
@@ -44,6 +46,8 @@ namespace PropertySystem
                 tags.Add(tag);
                 onAdd?.Invoke(tag);
             }
+            if (tag == Tag.Die)
+                MessageBroker.localBus.broadcastChannel.SendMessage(new SendDeadCharacter_Msg(this.transform));
         }
 
         public void RemoveTag(Tag tag)

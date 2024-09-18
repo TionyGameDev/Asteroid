@@ -10,14 +10,14 @@ namespace Ability
     public class ShootAbility : Ability
     {
         [SerializeField] 
-        private ImpactSetting _impact;
+        protected ImpactSetting _impact;
         [SerializeField] 
-        private Bullet _bulletNew;
+        protected Bullet _bullet;
         
         [SerializeField] 
-        private Weapon _weapon;
+        protected Weapon _weapon;
 
-        private bool _press;
+        protected bool _press;
 
         private void Update()
         {
@@ -26,15 +26,14 @@ namespace Ability
                 HandleShooting();
         }
 
-        private void HandleShooting() 
+        protected virtual void HandleShooting() 
         {
             _onActive?.Invoke();
             
             Quaternion rotationShip =_root.rotation;
-
-            var impact = new ImpactSetting();
+            
             _impact.ImpactInfo.attacker = _character;
-            _weapon.InstantiateBullet(_impact,_bulletNew,rotationShip);
+            _weapon.InstantiateBullet(_impact,_bullet,rotationShip);
 
         }
 

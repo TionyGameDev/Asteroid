@@ -30,10 +30,16 @@ namespace GameSystem
                 DelayDestroy();
         }
 
+        public void DestroySelf()
+        {
+            ((IDestroyer) this).UseDestroy();
+        }
+
         private async void DelayDestroy()
         {
             await Task.Delay((int)_timeAutoDestroy * 1000);
-            ((IDestroyer) this).UseDestroy();
+            if (gameObject)
+                ((IDestroyer) this).UseDestroy();
         }
 
         void IDestroyer.UseDestroy()
