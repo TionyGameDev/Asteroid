@@ -23,99 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfc26fea-6a3d-4166-a0a5-9754d5ae3352" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/BroadcastChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/BroadcastChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageBus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/ITransporter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBroker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBroker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBusManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageBusManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageChannelManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/MessageChannelManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/IMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/IMessage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendCreatePlayer_Msg.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendCreatePlayer_Msg.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendDeadCharacter_Msg.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendDeadCharacter_Msg.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendNewPosition_Msg.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendNewPosition_Msg.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Unsubsriber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Unsubsriber.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/ImpactTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/ImpactTrigger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/EndGameState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/EndGameState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/GameState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/GameState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/GameStateMachine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/GameStateMachine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/IStepInit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/IStepInit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/StartGameState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/StartGameState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/Step.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/Step/InitializationManagers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/Step/InitializationManagers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/Step/InstantiateStep.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/Step/InstantiateStep.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/InstantiateHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/InstantiateHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourcesLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourcesLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScreenManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScreenManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EnemyAsteroid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EnemyAsteroid.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EnemyUFO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EnemyUFO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ISetDirection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ISetDirection.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/CharacterEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/CharacterEntity.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BaseGameUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BaseGameUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/IVerifyHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/IVerifyHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PoolObjects.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PoolObjects.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroid/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroid/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroid/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Meteor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Meteor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/BaseCooldownControllerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/BaseCooldownControllerHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ByTimeCooldownHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ByTimeCooldownHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ByTimeCooldownHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/StandartCooldownHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ByTimeCooldownHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/StandartCooldownHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/CooldownController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/CooldownController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ICooldown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ICooldown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/ShootAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/ShootAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/HealthDamageStep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/HealthDamageStep.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSystem/Destroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSystem/Destroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScreenWrapManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScreenWrapManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/NoneCooldownHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/NoneCooldownHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/IImpactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/IImpactable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/PropertyCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PropertySystem/PropertyCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singleton/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,43 +55,37 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78266E6E-F69D-4275-9E5E-B24BDE7E8278/ab/a5bfced2/OdinSerializeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F7BCD9BF-A40C-4821-ACDD-A68A85850616/a3/62da3787/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@13.1.8/Runtime/UniversalRenderPipelineGlobalSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5FE2538C-35C0-4372-826A-3B4DFD5B6B88/39/00cab748/OdinAttributeDrawer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0DA8A948-97C9-4541-9A99-35A75F4E9B6A/0a/a43ba78b/Action.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Plugins/UI/BaseInputOverride.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@13.1.8/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ability/ShootAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F7BCD9BF-A40C-4821-ACDD-A68A85850616/09/c0c2af56/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F7BCD9BF-A40C-4821-ACDD-A68A85850616/33/46c5966d/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F7BCD9BF-A40C-4821-ACDD-A68A85850616/cb/6fceca07/IObjectPool`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/BroadcastChannel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Unsubsriber.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/IMessageBus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/IMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendNewPosition_Msg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVC/BaseGameModeUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVC/IGameGameUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PropertySystem/IImpactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVC/IGameUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVC/BaseGameUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ICooldown.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/BaseCooldownControllerHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ByTimeCooldownHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ResourcesLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ISetDirection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/EnemyAsteroid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/EnemyUFO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PropertySystem/CharacterEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Events/MessageSystem/Messages/SendDeadCharacter_Msg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/GameState.cs" />
@@ -184,16 +106,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Singleton/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/Destroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/ImpactTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/ShootAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullets/LaserBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Laser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BaseGameUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/StartGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/DamageSystem/HealthDamageStep.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSystem/GameState/EndGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/ShootAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input/InputPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/CumulativeCooldownHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/IVerifyHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/BaseCooldownControllerHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/ICooldown.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/StandartCooldownHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/LaserAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Cooldown/CooldownController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EnemyManagers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PoolObjects.cs" />
       </list>
     </option>
   </component>
@@ -208,6 +139,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -240,7 +172,10 @@
       <updated>1726468735312</updated>
       <workItem from="1726468739971" duration="22092000" />
       <workItem from="1726558132765" duration="25148000" />
-      <workItem from="1726640528618" duration="23278000" />
+      <workItem from="1726640528618" duration="23411000" />
+      <workItem from="1727600260166" duration="1210000" />
+      <workItem from="1727603629682" duration="1694000" />
+      <workItem from="1727605371476" duration="15652000" />
     </task>
     <servers />
   </component>
@@ -269,21 +204,25 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1114" y="401" key="RiderGenerateDialog/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1726663232225" />
-    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1726647397584">
+    <state x="781" y="345" key="SettingsEditor" timestamp="1727615894215">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1726647397584" />
-    <state x="881" y="404" width="798" height="622" key="find.popup" timestamp="1726651029300">
+    <state x="781" y="345" key="SettingsEditor/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1727615894215" />
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1727619001775">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="881" y="404" width="798" height="622" key="find.popup/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1726651029300" />
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1727619001775" />
+    <state x="881" y="404" width="798" height="622" key="find.popup" timestamp="1727615874627">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="881" y="404" width="798" height="622" key="find.popup/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1727615874627" />
     <state x="936" y="330" key="run.anything.popup" timestamp="1726563943304">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1726563943304" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1726658576867">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1727620837348">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1726658576867" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.257.1536.864@0.0.2560.1400" timestamp="1727620837348" />
   </component>
 </project>

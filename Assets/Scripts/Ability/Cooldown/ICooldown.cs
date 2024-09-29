@@ -1,31 +1,18 @@
 ﻿using System;
+using Ability.Cooldown;
 
 namespace Ability
 {
-    public class UpdatePointsEventArgs
-    {
-        public readonly float Add;
-        public readonly float Curr;
-        public readonly float Total;
-
-        public UpdatePointsEventArgs(float add, float curr, float total)
-        { 
-            Add = add;
-            Curr = curr;
-            Total = total;
-        }
-    }
     public interface ICooldown : IDisposable
     {
         event Action OnRun;
         event Action OnComplete;
         event Action<float> OnUpdate;
 
-        void Run();
-        void Run(float total);
+        void Run(float perSec,float total);
         void Complete();
 
-        void SetPoints(float points);
+        void SetPoints(float perSec,float points);
 
         void SetHandler(ICooldownHandler handler);
     }
@@ -35,7 +22,7 @@ namespace Ability
         public abstract event Action<float> OnAddPoint;
 
         public abstract void Init(CooldownController controller);
-        public abstract  void Run();
+        public abstract  void Run(float perSec);
         public abstract void Complete();
         public virtual void Dispose()
         {

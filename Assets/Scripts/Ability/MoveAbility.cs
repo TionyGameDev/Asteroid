@@ -1,4 +1,5 @@
-﻿using Input;
+﻿using System;
+using Input;
 using Player;
 using UnityEngine;
 
@@ -7,9 +8,7 @@ namespace Ability
     public class MoveAbility : Ability
     {
         private bool _isAlive = true;
-        
-    
-       
+
         [SerializeField] 
         private float _shipAcceleration;
         [SerializeField]
@@ -17,10 +16,14 @@ namespace Ability
         [SerializeField] 
         private float _shipRotationSpeed;
 
-
-        private void Update()
+        private void Start()
         {
-            _input = _inputPlayer.ReadVector2();
+            _inputPlayer.OnVector2Changed += InputPlayerOnOnVector2Changed;
+        }
+
+        private void InputPlayerOnOnVector2Changed(Vector2 obj)
+        {
+            _input = obj;
         }
 
         private void FixedUpdate()

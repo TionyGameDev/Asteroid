@@ -28,6 +28,8 @@ namespace PropertySystem
             this.target = target;
             this.name = name;
             this.value = value;
+            
+            //Debug.Log($"Impact applied by {attacker} to {target} with {name} for {value} damage.");
         }
         
     }

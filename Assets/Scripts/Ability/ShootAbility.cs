@@ -9,6 +9,12 @@ namespace Ability
 {
     public class ShootAbility : Ability
     {
+        public enum Events
+        { 
+            OnShoot,
+            OnStay
+        }
+        
         [SerializeField] 
         protected ImpactSetting _impact;
         [SerializeField] 
@@ -19,9 +25,18 @@ namespace Ability
 
         protected bool _press;
 
+        private void Start()
+        {
+            _inputPlayer.OnPressChanged += InputPlayerOnPressChanged;
+        }
+
+        private void InputPlayerOnPressChanged(bool obj)
+        {
+            _press = obj;
+        }
+
         private void Update()
         {
-            _press = _inputPlayer.ReadPress();
             if (_press && !_blocked)
                 HandleShooting();
         }

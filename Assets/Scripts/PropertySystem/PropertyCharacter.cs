@@ -16,7 +16,7 @@ namespace PropertySystem
         private DamageSystem _damageSystem;
         
         [SerializeField] 
-        private List<Property> _propertiesCharacter;
+        private List<Property> _characterProperties;
 
         private TagComponent _tagComponent;
         public Action<Tag> onAdd { get; set; }
@@ -24,17 +24,17 @@ namespace PropertySystem
 
         private readonly HashSet<Tag> tags = new HashSet<Tag>();
 
-        private void Start()
+        private void OnEnable()
         {
-            for (int i = 0; i < _propertiesCharacter.Count; i++)
-                _propertiesCharacter[i].Init();
+            for (int i = 0; i < _characterProperties.Count; i++)
+                _characterProperties[i].Init();
         }
 
         public Property GetProperty(PropertyName namePropety)
         {
-            for (int i = 0; i < _propertiesCharacter.Count; i++)
-                if (_propertiesCharacter[i].name == namePropety)
-                    return _propertiesCharacter[i];
+            for (int i = 0; i < _characterProperties.Count; i++)
+                if (_characterProperties[i].name == namePropety)
+                    return _characterProperties[i];
                 
             return null;
         }
@@ -47,8 +47,13 @@ namespace PropertySystem
                 onAdd?.Invoke(tag);
             }
             if (tag == Tag.Die)
+            {
                 MessageBroker.localBus.broadcastChannel.SendMessage(new SendDeadCharacter_Msg(this.transform));
+                OnDie();
+            }
         }
+
+        protected virtual void OnDie() { }
 
         public void RemoveTag(Tag tag)
         {

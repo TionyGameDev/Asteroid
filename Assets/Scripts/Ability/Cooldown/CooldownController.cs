@@ -1,60 +1,74 @@
 ﻿using System;
+using Sirenix.Serialization;
 using UnityEngine;
 
-namespace Ability
+namespace Ability.Cooldown
 {
-    public class CooldownController : MonoBehaviour , ICooldown
+    public class CooldownController : MonoBehaviour, ICooldown
     {
         [SerializeReference]
         private ICooldownHandler _cooldownHandler;
+        
+        [SerializeReference, OdinSerialize]
+        private IVerifyHandler _verifyHandler;
 
         [SerializeField]
-        private float _currPoints;
+        private float _currentCooldown;
+        
         [SerializeField]
-        private float _totalPoints;
+        private float _maxCooldown;
+        
+        private float _perSec;
 
         public event Action OnRun;
         public event Action OnComplete;
         public event Action<float> OnUpdate;
 
-        public void Run()
+        private void OnDisable()
+        {
+            Dispose();
+        }
+
+        public void Run(float perSec)
         {
             OnRun?.Invoke();
-            _cooldownHandler.Run();
+            _cooldownHandler?.Run(perSec);
         }
 
-        public void Run(float total)
+        public void Run(float perSec, float total)
         {
-            ((ICooldown) this).SetPoints(total);
-            Run();
+            SetPoints(perSec, total);
+            Run(perSec);
+            
+            _currentCooldown = Mathf.Max(_currentCooldown - 1, 0);
         }
 
-        void ICooldown.Complete()
+        public void Complete()
         {
             OnComplete?.Invoke();
-            
-            _cooldownHandler.Complete();
+            _cooldownHandler?.Complete();
         }
+
         private void AddPoints(float value)
         {
-            if (value == 0) return;
-            
-            _currPoints = _currPoints + value;
+            if (value == 0) return; 
 
-            _currPoints = _currPoints > _totalPoints ? _totalPoints : _currPoints;
+            _currentCooldown = Mathf.Min(_currentCooldown + value, _maxCooldown);
 
-            OnUpdate?.Invoke(_currPoints);
+            OnUpdate?.Invoke(_currentCooldown);
 
-            if (VerifyOnComplete())
-                ((ICooldown) this).Complete();
+            if (_verifyHandler?.VerifyOnComplete(_currentCooldown, _maxCooldown) == true)
+            {
+                Complete();
+            }
         }
 
-        private bool VerifyOnComplete() => _currPoints >= _totalPoints;
-
-        void ICooldown.SetPoints(float points)
+        public void SetPoints(float perSec, float points)
         {
-            _totalPoints = points;
+            _maxCooldown = points;
+            _perSec = perSec;
         }
+
         public void SetHandler(ICooldownHandler handler)
         {
             _cooldownHandler = handler;
@@ -67,9 +81,13 @@ namespace Ability
             AddPoints(value);
         }
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
-            _cooldownHandler?.Dispose();
+            if (_cooldownHandler != null)
+            {
+                _cooldownHandler.OnAddPoint -= CooldownHandlerOnOnAddPoint;
+                _cooldownHandler.Dispose();
+            }
         }
     }
 }

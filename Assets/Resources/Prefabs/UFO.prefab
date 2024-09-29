@@ -139,11 +139,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageSystem: {fileID: 11400000, guid: 2f53a91267e25df4794dbe2e557dfcc7, type: 2}
-  _propertiesCharacter:
+  _characterProperties:
   - name: 0
-    currentValue: 0
+    currentValue: 1
     maxValue: 1
   _rigidbody: {fileID: 4493385672551770210}
+  _typeEnemy: 1
 --- !u!114 &9018758399956197450
 MonoBehaviour:
   m_ObjectHideFlags: 0

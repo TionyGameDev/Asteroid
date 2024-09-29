@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class EnemyUFO : CharacterEntity , ISetMoveEnemy
+    public class EnemyUFO : BaseEnemy , ISetMoveEnemy
     {
         private Transform _target;
         private float _speed;

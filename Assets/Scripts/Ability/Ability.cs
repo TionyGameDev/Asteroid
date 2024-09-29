@@ -1,4 +1,7 @@
 ﻿using System;
+using Ability.Cooldown;
+using Events.MessageSystem;
+using Events.MessageSystem.Messages;
 using Input;
 using Player;
 using PropertySystem;
@@ -21,10 +24,13 @@ namespace Ability
 
         [SerializeReference,OdinSerialize] 
         private ICooldownHandler _cooldownHandler = new NoneCooldownHandler();
-        private bool useCooldown => !(_cooldownHandler is NoneCooldownHandler);
+        private bool useCooldown => _cooldownHandler != null && !(_cooldownHandler is NoneCooldownHandler);
 
         [SerializeField,ShowIf(nameof(useCooldown))] 
-        private float _cooldownTime;
+        protected float _cooldownTime;
+        [SerializeField,ShowIf(nameof(useCooldown))] 
+        private float _perSecPoint;
+        
         [SerializeField] 
         protected InputPlayer _inputPlayer;
         
@@ -38,6 +44,9 @@ namespace Ability
         {
             _root = transform.root;
             _character = _root.GetComponent<PropertyCharacter>();
+            if (_character == null)
+                Debug.LogError("PropertyCharacter component not found on the root object.");
+            
             _rigidbody =  _root.GetComponent<Rigidbody2D>();
             
             if (_cooldownController)
@@ -45,16 +54,26 @@ namespace Ability
                 _cooldownController.SetHandler(_cooldownHandler);
 
                 _cooldownController.OnRun += CooldownControllerOnOnRun;
+                _cooldownController.OnUpdate += CooldownControllerOnUpdate;
                 _cooldownController.OnComplete += CooldownControllerOnOnComplete;
             }
             
             _onActive += OnActiveSkill;
+            
+            MessageBroker.localBus.broadcastChannel.SendMessage(new SendAbility_Msg(this));
         }
+
+        protected void CooldownControllerOnUpdate(float value)
+        {
+            OnUpdateCooldown(value);
+        }
+
+        protected virtual void OnUpdateCooldown(in float value){}
 
         private void OnActiveSkill()
         {
             if (_cooldownController)
-                _cooldownController.Run(_cooldownTime * 60);
+                _cooldownController.Run(_perSecPoint,_cooldownTime);
         }
 
         private void CooldownControllerOnOnRun()
@@ -72,6 +91,7 @@ namespace Ability
             if (_cooldownController)
             {
                 _cooldownController.OnRun -= CooldownControllerOnOnRun;
+                _cooldownController.OnUpdate -= CooldownControllerOnUpdate;
                 _cooldownController.OnComplete -= CooldownControllerOnOnComplete;
             }
         }

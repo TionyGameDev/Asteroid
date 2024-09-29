@@ -1,48 +1,59 @@
-﻿using System;
-using Events.MessageSystem;
+﻿using Events.MessageSystem;
 using Events.MessageSystem.Messages;
 using Singleton;
 using UnityEngine;
 
 namespace Managers
 {
-    public class ScreenManager : Singleton<ScreenManager> ,
+    public class ScreenManager : Singleton<ScreenManager>,
         IMessageListener<SendCreatePlayer_Msg>
     {
         [SerializeField]
         private GameObject _player;
-         
+
+        private Camera _mainCamera;
         private float leftBoundary;
         private float rightBoundary;
         private float topBoundary;
         private float bottomBoundary;
         private Vector2 _lastPosition = Vector2.zero;
+
         public void Init()
         {
-            MessageBroker.localBus.broadcastChannel.Subscribe(this);
             InitializeBoundaries();
+            MessageBroker.localBus.broadcastChannel.Subscribe(this);
         }
-        private void OnDestroy()
+
+        private void OnEnable()
+        {
+            MessageBroker.localBus.broadcastChannel.Subscribe(this);
+        }
+
+        private void OnDisable()
         {
             MessageBroker.localBus.broadcastChannel.Unsubscribe(this);
         }
 
         private void InitializeBoundaries()
         {
-            if (Camera.main is not null)
+            _mainCamera = Camera.main;
+            if (_mainCamera == null)
             {
-                leftBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
-                rightBoundary = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-                topBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
-                bottomBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
+                Debug.LogError("Main Camera not found!");
+                return;
             }
+
+            leftBoundary = _mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+            rightBoundary = _mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+            topBoundary = _mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+            bottomBoundary = _mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
         }
 
         private void Update()
         {
             if (_player == null)
                 return;
-            
+
             UpdateObjectPosition();
             UpdateCoordinate();
         }
@@ -50,27 +61,23 @@ namespace Managers
         private void UpdateCoordinate()
         {
             var pos = _player.transform.position;
-            var x = (int) Mathf.Clamp(pos.x, leftBoundary, rightBoundary);
-            var y = (int) Mathf.Clamp(pos.y, bottomBoundary, topBoundary);
-            var newPosition = new Vector2(x,y);
-            
+            var x = Mathf.Clamp(pos.x, leftBoundary, rightBoundary);
+            var y = Mathf.Clamp(pos.y, bottomBoundary, topBoundary);
+            var newPosition = new Vector2(x, y);
+
             if (_lastPosition != newPosition)
             {
                 _lastPosition = newPosition;
-                 MessageBroker.localBus.broadcastChannel.SendMessage(new SendNewPosition_Msg(_lastPosition));
+                MessageBroker.localBus.broadcastChannel.SendMessage(new SendNewPosition_Msg(_lastPosition));
             }
-           
         }
 
         public void UpdateObjectPosition()
         {
             Vector3 position = _player.transform.position;
 
-            float width = rightBoundary - leftBoundary;
-            float height = topBoundary - bottomBoundary;
-
-            position.x = WrapPosition(position.x, leftBoundary, rightBoundary, width);
-            position.y = WrapPosition(position.y, bottomBoundary, topBoundary, height);
+            position.x = WrapPosition(position.x, leftBoundary, rightBoundary, rightBoundary - leftBoundary);
+            position.y = WrapPosition(position.y, bottomBoundary, topBoundary, topBoundary - bottomBoundary);
 
             _player.transform.position = position;
         }

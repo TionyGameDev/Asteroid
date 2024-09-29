@@ -17,10 +17,11 @@
             <e p="AbilityController.cs" t="Include" />
             <e p="Cooldown" t="Include">
               <e p="BaseCooldownControllerHandler.cs" t="Include" />
-              <e p="ByTimeCooldownHandler.cs" t="Include" />
               <e p="CooldownController.cs" t="Include" />
               <e p="ICooldown.cs" t="Include" />
+              <e p="IVerifyHandler.cs" t="Include" />
               <e p="NoneCooldownHandler.cs" t="Include" />
+              <e p="StandartCooldownHandler.cs" t="Include" />
             </e>
             <e p="LaserAbility.cs" t="Include" />
             <e p="MoveAbility.cs" t="Include" />
@@ -80,6 +81,7 @@
           <e p="Managers" t="Include">
             <e p="EnemyManagers.cs" t="Include" />
             <e p="InstantiateHelper.cs" t="Include" />
+            <e p="PoolObjects.cs" t="Include" />
             <e p="ResourcesLoader.cs" t="Include" />
             <e p="ScreenManager.cs" t="Include" />
           </e>

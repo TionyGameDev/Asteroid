@@ -1,7 +1,6 @@
 ﻿using System;
-using UnityEngine;
 
-namespace Ability
+namespace Ability.Cooldown
 {
     [Serializable]
     public abstract class BaseCooldownControllerHandler : ICooldownHandler
@@ -10,16 +9,16 @@ namespace Ability
 
         protected bool IsRun { get; private set; }
 
-        public override void Run()
+        public override void Run(float perSec)
         {
             if (IsRun) return;
 
             IsRun = true;
 
-            OnRun();
+            OnRun(perSec);
         }
 
-        protected virtual void OnRun() { }
+        protected virtual void OnRun(float perSec) { }
 
         public override void Complete()
         {

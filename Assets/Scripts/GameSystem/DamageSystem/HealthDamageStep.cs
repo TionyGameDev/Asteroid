@@ -17,7 +17,7 @@ namespace GameSystem.DamageSystem
                 if (data.value > 0)
                 {
                     health.currentValue -= data.value;
-                    Debug.Log($"{entity.name} получил {data.value} урона по здоровью. Текущее здоровье: {health.currentValue}");
+                    //Debug.Log($"{entity.name} получил {data.value} урона по здоровью. Текущее здоровье: {health.currentValue}");
 
                     if (health.currentValue <= 0)
                         entity.AddTag(_deathTag);

@@ -27,24 +27,31 @@ namespace GameSystem
         private void OnEnable()
         {
             if (_autoDestroy)
-                DelayDestroy();
+                StartCoroutine(nameof(DelayDestroy));// DelayDestroy();
+        }
+
+        private IEnumerator DelayDestroy()
+        {
+            yield return new WaitForSeconds(_timeAutoDestroy);
+            
+            ((IDestroyer) this).UseDestroy();
         }
 
         public void DestroySelf()
         {
+            if (_autoDestroy)
+                StopCoroutine(nameof(DelayDestroy));
+            
             ((IDestroyer) this).UseDestroy();
-        }
-
-        private async void DelayDestroy()
-        {
-            await Task.Delay((int)_timeAutoDestroy * 1000);
-            if (gameObject)
-                ((IDestroyer) this).UseDestroy();
         }
 
         void IDestroyer.UseDestroy()
         {
-            StartCoroutine(nameof(SelfDestroy));
+            if (this == null)
+                return;
+            
+            if (gameObject.activeSelf)
+                StartCoroutine(nameof(SelfDestroy));
         }
 
         private IEnumerator SelfDestroy()
@@ -52,8 +59,7 @@ namespace GameSystem
             _beforeAction?.Invoke();
             
             yield return new WaitForSeconds(_delay);
-            
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             
         }
     }

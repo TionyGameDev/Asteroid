@@ -11,8 +11,7 @@ namespace TagSystem
     {
         void AddTag(Tag tag);
         void RemoveTag(Tag tag);
-        bool HasTag(Tag tag);
-        IEnumerable<Tag> GetTags();
+        bool HasTag(Tag tag); 
     }
     
     public class TagComponent : SerializedMonoBehaviour
@@ -34,10 +33,7 @@ namespace TagSystem
             {
                 var tagEvent = _eventTag[i];    
                 if (tagEvent.tag == tagObj)
-                {
-                    Debug.Log("INVOKE");
                     tagEvent.eventsAdd?.Invoke();
-                }
                 //if (tagEvent.tag.Contains(tagObj.ToString()))
                 {
                     
